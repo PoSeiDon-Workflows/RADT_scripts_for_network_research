@@ -164,8 +164,8 @@ speed_config = [
 ]
 
 cca_config = [
-    # {"cca1": "bbr1", "cca2": "cubic"},
-    # {"cca1": "bbr2", "cca2": "cubic"},
+    {"cca1": "bbr1", "cca2": "cubic"},
+    {"cca1": "bbr2", "cca2": "cubic"},
     {"cca1": "bbr3", "cca2": "cubic"},
     {"cca1": "htcp", "cca2": "cubic"},
     {"cca1": "cubic", "cca2": "cubic"},
