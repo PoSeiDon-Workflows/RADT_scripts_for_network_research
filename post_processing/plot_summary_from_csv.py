@@ -86,7 +86,7 @@ for idx, group in enumerate(sorted_groups):
     # First axis (left y-axis for vertheta)
     # ax1.set_xlabel('Comparison', fontsize=15)
     ax1.set_ylabel(r'$\mathrm{Avg}(\theta)$', fontsize=18, color='tab:red')  # Using LaTeX for theta symbol
-    ax1.scatter(group['CCA_Comparison'], group['vertheta'], color='red', marker='o', label=rf'$\mathrm{{Avg}}(\theta)$')
+    ax1.scatter(group['CCA_Comparison'], group['vertheta'], color='red', marker='o', s=100, label=rf'$\mathrm{{Avg}}(\theta)$')
     ax1.set_ylim(0, 1)
     ax1.tick_params(axis='y', labelcolor='tab:red')
     ax1.tick_params(axis='x', labelrotation=45)
@@ -94,14 +94,14 @@ for idx, group in enumerate(sorted_groups):
     # Second axis (right y-axis for fairness index)
     ax2 = ax1.twinx()
     ax2.set_ylabel(r'$\mathrm{Avg}(J_{\mathrm{index}})$', fontsize=18, color='tab:blue')  # Using LaTeX for J_index symbol
-    ax2.scatter(group['CCA_Comparison'], group['Fairness_Index'], color='blue', marker='s', label=r'$\mathrm{{Avg}}(J_{\mathrm{index}})$')
+    ax2.scatter(group['CCA_Comparison'], group['Fairness_Index'], color='blue', marker='s', s=100, label=r'$\mathrm{{Avg}}(J_{\mathrm{index}})$')
     ax2.set_ylim(0, 1)
     ax2.tick_params(axis='y', labelcolor='tab:blue')
     
     # Third axis for varpi
     ax3 = ax1.twinx()
     ax3.set_ylabel(r'$\mathrm{Avg}(\varpi)$', fontsize=18, color='tab:green')  # Using LaTeX for varpi symbol
-    ax3.scatter(group['CCA_Comparison'], group['varpi'], color='green', marker='^', label=r'$\mathrm{{Avg}}(\varpi)$')
+    ax3.scatter(group['CCA_Comparison'], group['varpi'], color='green', marker='^', s=100, label=r'$\mathrm{{Avg}}(\varpi)$')
     ax3.tick_params(axis='y', labelcolor='tab:green')
     ax3.spines['right'].set_position(('outward', 60))
     

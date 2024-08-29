@@ -79,9 +79,11 @@ def import_csv_to_influxdb(csv_file, measurement_name, start_time, fields):
             for i in range(0, len(points), batch_size):
                 batch = points[i:i + batch_size]
                 success = client.write_points(batch)
-                if success:
-                    logging.info(f"Batch {i//batch_size + 1} written successfully.")
-                else:
+                # if success:
+                #     logging.info(f"Batch {i//batch_size + 1} written successfully.")
+                # else:
+                #     logging.error(f"Batch {i//batch_size + 1} failed to write.")
+                if not success:
                     logging.error(f"Batch {i//batch_size + 1} failed to write.")
             logging.info(f"Data imported from {csv_file} to InfluxDB.")
         else:
@@ -157,7 +159,7 @@ def process_directory_structure(aqm_config, cca_config, speed_config, bdp_config
 
 # Main script
 speed_config = [
-    {"tag": "1gbps", "speed": 1000000000, "processes": 10, "parallel_streams": 1},
+    # {"tag": "1gbps", "speed": 1000000000, "processes": 10, "parallel_streams": 1},
     {"tag": "10gbps", "speed": 10000000000, "processes": 20, "parallel_streams": 5},
     {"tag": "25gbps", "speed": 25000000000, "processes": 25, "parallel_streams": 10},
     {"tag": "40gbps", "speed": 40000000000, "processes": 25, "parallel_streams": 10}
