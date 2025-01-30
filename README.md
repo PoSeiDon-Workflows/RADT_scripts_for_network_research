@@ -117,3 +117,8 @@ The RADT dataset is intended to serve as a foundation for future research into T
 ## Support
 
 If you encounter any issues or have questions, please open an issue in the repository. Or you can contact: Imtiaz Mahmud (imtiaz.tee@gmail.com, imahmud@lbl.gov)
+
+## Copyright
+Copyright (c) 2025, The Regents of the University of California, through Lawrence Berkeley National Laboratory, Argonne National Laboratory, Oak Ridge National Laboratory, University of Southern California, and the Renaissance Computing Institute. All rights reserved.
+
+This dataset is made available under the terms of the Creative Commons Attribution 4.0 International License (CC BY 4.0).
